@@ -1,0 +1,148 @@
+# depslib dependency file v1.0
+1530576538 source:c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdio.h>
+	<math.h>
+	<string>
+	"Frames.h"
+	"virabrequim.h"
+	"biela.h"
+	"pistao.h"
+	"ponto.h"
+	"camera.h"
+
+1530074449 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\glut.h
+	"freeglut_std.h"
+
+1530074449 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1530074449 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1530501700 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\frames.h
+	<stdio.h>
+	<time.h>
+
+1530569161 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\virabrequim.h
+	"ponto.h"
+
+1530393033 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\ponto.h
+
+1530575864 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\biela.h
+	"ponto.h"
+
+1530556728 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\pistao.h
+	"ponto.h"
+
+1530556763 c:\users\danie\desktop\t4-cg-motor-3d-master\dmdoebber\src\camera.h
+
+1530587756 source:c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdio.h>
+	<math.h>
+	<string>
+	"Frames.h"
+	"virabrequim.h"
+	"biela.h"
+	"pistao.h"
+	"ponto.h"
+	"camera.h"
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\glut.h
+	"freeglut_std.h"
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1530501700 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\frames.h
+	<stdio.h>
+	<time.h>
+
+1530569161 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\virabrequim.h
+	"ponto.h"
+
+1530393033 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\ponto.h
+
+1530587539 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\biela.h
+	"ponto.h"
+
+1530586681 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\pistao.h
+	"ponto.h"
+
+1530556763 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\camera.h
+
+1530588478 source:c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdio.h>
+	<math.h>
+	<string>
+	"Frames.h"
+	"virabrequim.h"
+	"biela.h"
+	"pistao.h"
+	"ponto.h"
+	"camera.h"
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\include\gl\glut.h
+	"freeglut_std.h"
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1530074449 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1530501700 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\frames.h
+	<stdio.h>
+	<time.h>
+
+1530588608 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\virabrequim.h
+	"ponto.h"
+
+1530393033 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\ponto.h
+
+1530587539 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\biela.h
+	"ponto.h"
+
+1530586681 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\pistao.h
+	"ponto.h"
+
+1530556763 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\camera.h
+

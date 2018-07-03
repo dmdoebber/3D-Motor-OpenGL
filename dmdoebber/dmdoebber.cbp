@@ -45,7 +45,12 @@
 		</Linker>
 		<Unit filename="include/GL/glut.h" />
 		<Unit filename="src/Frames.h" />
+		<Unit filename="src/biela.h" />
+		<Unit filename="src/camera.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/pistao.h" />
+		<Unit filename="src/ponto.h" />
+		<Unit filename="src/virabrequim.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

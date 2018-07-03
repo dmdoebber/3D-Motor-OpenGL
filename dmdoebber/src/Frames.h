@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <time.h>
 
-#define UPDATE_RATE 300   //milisegundos
+#define UPDATE_RATE 300
 
-
+/// PEGUEI DA DEMO FPS
 class Frames{
    clock_t t1, t2;
    long    cont_frames;
@@ -16,22 +16,17 @@ public:
    {
       t1 = clock();
 	  cont_frames = 0;
-      fps_old = 20; //valor inicial
+      fps_old = 20;
    }
 
-   //*********************************************************************
-   // Este metodo deve ser chamado uma unica vez a cada atualizacao de tela
-   // Retorna o fps da aplicacao. Altere o valor de UPDATE_RATE para diferentes
-   // tempos de atualizacao.
-   //*********************************************************************
    float getFrames()
    {
       double tempo;
 
       t2 = clock();
-      tempo  = (double)(t2 - t1);  //milisegundos
+      tempo  = (double)(t2 - t1);
       cont_frames++;
-      //apos UPDATE_RATE milisegundos, atualiza o framerate
+
       if( tempo > UPDATE_RATE )
       {
          t1 = t2;
@@ -41,11 +36,9 @@ public:
 
          return fps;
       }
-      //se nao foi decorrido UPDATE_RATE milisegundos, retorna a taxa antiga
+
       return fps_old;
    }
 };
-
-
 
 #endif // FPS_H_INCLUDED
