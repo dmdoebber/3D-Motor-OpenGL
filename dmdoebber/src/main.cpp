@@ -12,6 +12,7 @@
 #include "biela.h"
 #include "pistao.h"
 #include "ponto.h"
+#include "cabecote.h"
 #include "camera.h"
 
 #define PI_2 6.28318531
@@ -21,15 +22,16 @@
 
 int   polygonMode = 1;
 
-float rx = 0, rz = 0;
+float rx = 0;
+float rz = 0;
 
-float RPM = 0;
-float FPS = 500;
+float RPM  = 0;
+float FPS  = 60;
 
 float angR = 0.0;
-float ang = 0.0;
-float inc = 0.0;
-float tam_biela = 2.0;
+float ang  = 0.0;
+float inc  = 0.0;
+float tam_biela = 2.5;
 
 Frames *frames;
 
@@ -41,18 +43,18 @@ biela biela2;
 pistao pistao1;
 pistao pistao2;
 
+cabecote cabecote1;
+cabecote cabecote2;
+
 camera cam;
 
-GLfloat mat_specular[] = { 1, 1, 1, 1 };
-GLint mat_shininess = 10;
+GLint   mat_shininess      = 10;
+GLfloat mat_specular[]     = {  1.0,  1.0,  1.0, 1 };
 
-GLfloat mat_pistao[] = {0, 0, 0, 1};
-GLfloat mat_biela[] = {1, 0, 0, 1};
-
-GLfloat light_0_position[] = { 50, 50, 10, 1};
-GLfloat light_0_difuse[]   = { 0.7, 0.7, 0.7, 1};
-GLfloat light_0_specular[] = { 1, 1, 1, 1};
-GLfloat light_0_ambient[]  = { 0.2, 0.2, 0.2, 1};
+GLfloat light_0_position[] = { 10.0, 10.0, 10.0, 1 };
+GLfloat light_0_difuse[]   = {  0.7,  0.7,  0.7, 1 };
+GLfloat light_0_specular[] = {  1.0,  1.0,  1.0, 1 };
+GLfloat light_0_ambient[]  = {  0.2,  0.2,  0.2, 1 };
 
 void init(){
     frames = new Frames();
@@ -68,6 +70,12 @@ void init(){
 
     pistao1.encaixePistao.x = -1.5;
     pistao2.encaixePistao.x = 1.5;
+
+    cabecote1.tam_cabecote = 2.5;
+    cabecote2.tam_cabecote = 2.5;
+
+    cabecote1.pos_cabecote = pistao1.encaixePistao;
+    cabecote2.pos_cabecote = pistao2.encaixePistao;
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -191,11 +199,14 @@ void display(void)
     glRotatef ((GLfloat) rx, 0.0f, 1.0f, 0.0f);
     glRotatef ((GLfloat) rz, 1.0f, 0.0f, 0.0f);
 
+    glRotated(90, 0, 1 ,0);
+
+    glRotated(-90, 0, 1 ,0);
     /// CALCULO DE COORDENADAS POLARES PARA PEGAR OS PONTOS DE ENCAIXE COM O VIRABREQUIM
-    vira.encaixe1.y = sin(-angR + ( PI_2 / 4));
+    vira.encaixe1.y = sin(-angR + ( PI_2 / 4)); /// PI_2/4 ANG INICIAL DO EIXO DO VIRA
     vira.encaixe1.z = cos(-angR + ( PI_2 / 4));
 
-    vira.encaixe2.y = sin(-angR + (3 * (PI_2 / 4)));
+    vira.encaixe2.y = sin(-angR + (3 * (PI_2 / 4))); /// 3*PI_2/4 ANG INICIAL DO EIXO DO VIRA
     vira.encaixe2.z = cos(-angR + (3 * (PI_2 / 4)));
 
     ///SETA OS PONTOS DE ENCAIXE NO PISTAO E NA BIELA
@@ -223,6 +234,9 @@ void display(void)
 
     pistao1.render();
     pistao2.render();
+
+    cabecote1.render();
+    cabecote2.render();
 
     startGUI();
 
@@ -261,15 +275,12 @@ void keyboard(unsigned char key, int x, int y){
     case 'o':
         if(RPM < 1000)
             RPM += 1;
-        printf("\nrpm = %.2f (inc = %f)", RPM, inc);
         break;
     case 'p':
         if(RPM > 0)
             RPM -= 1;
         break;
-    case 'v':
-        printf("\n\nvoltas = %f FPS = %.0f", ang / 360, FPS);
-        break;
+
     }
 }
 
@@ -282,8 +293,7 @@ void MouseFunc(int botao, int estado, int x, int y){
     //printf("\n%d %d %d %d", botao, estado, x, y);
 }
 
-void reshape (int w, int h)
-{
+void reshape (int w, int h){
    glViewport (0, 0, (GLsizei) w, (GLsizei) h);
    glMatrixMode (GL_PROJECTION);
    glLoadIdentity();
@@ -292,8 +302,7 @@ void reshape (int w, int h)
    glLoadIdentity();
 }
 
-int main (int argc, char** argv)
-{
+int main (int argc, char** argv){
     glutInit(&argc, argv);
 
     glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH );

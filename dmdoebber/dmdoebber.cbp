@@ -46,6 +46,7 @@
 		<Unit filename="include/GL/glut.h" />
 		<Unit filename="src/Frames.h" />
 		<Unit filename="src/biela.h" />
+		<Unit filename="src/cabecote.h" />
 		<Unit filename="src/camera.h" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/pistao.h" />

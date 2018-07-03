@@ -15,9 +15,7 @@ private:
         glRotated(180, 0, 1, 0);
         gluDisk(gluNewQuadric(),     0, raio, div, 1);
         glRotated(180, 0, 1, 0);
-
         gluCylinder(gluNewQuadric(), raio, raio, height, div, 1);
-
         glTranslated(0, 0, height);
         gluDisk(gluNewQuadric(),     0, raio, div, 1);
 
@@ -27,16 +25,17 @@ private:
 public:
     ponto encaixeVira;
     ponto encaixePistao;
+    float tam_biela = 2.5;
     float ang = 0.0;
 
     void render(){
         glPushMatrix();
+
         glColor3f(0.75, 0.75, 0.75);
         ang = atan((encaixePistao.z - encaixeVira.z) / (encaixePistao.y - encaixeVira.y)) * 57.2958;
-        printf("ang = %.2f | oposto %.2f | adjacente %.2f\n", ang, (encaixePistao.z - encaixeVira.z), (encaixePistao.y - encaixeVira.y));
         glTranslated(encaixeVira.x, encaixePistao.y, 0);
         glRotated(ang, 1, 0, 0);
-        SolidCylinder(0.2, 2, 10);
+        SolidCylinder(0.2, tam_biela, 25);
 
         glPopMatrix();
     }

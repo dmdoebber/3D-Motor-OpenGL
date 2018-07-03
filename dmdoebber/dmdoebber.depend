@@ -97,7 +97,7 @@
 
 1530556763 c:\users\astros\desktop\t4-cg-motor-3d-master\dmdoebber\src\camera.h
 
-1530588478 source:c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\main.cpp
+1530603684 source:c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<stdlib.h>
@@ -110,6 +110,7 @@
 	"biela.h"
 	"pistao.h"
 	"ponto.h"
+	"cabecote.h"
 	"camera.h"
 
 1530074449 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\include\gl\glut.h
@@ -133,16 +134,18 @@
 	<stdio.h>
 	<time.h>
 
-1530588608 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\virabrequim.h
+1530604100 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\virabrequim.h
 	"ponto.h"
 
 1530393033 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\ponto.h
 
-1530587539 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\biela.h
+1530602924 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\biela.h
 	"ponto.h"
 
-1530586681 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\pistao.h
+1530599407 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\pistao.h
 	"ponto.h"
 
 1530556763 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\camera.h
+
+1530598187 c:\users\astros\desktop\t4-cg-motor-3d\dmdoebber\src\cabecote.h
 
